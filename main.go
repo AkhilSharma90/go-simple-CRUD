@@ -49,7 +49,7 @@ func main() {
 					todos[index].ID = todo.ID
 					todos[index].Task = todo.Task
 					rw.WriteHeader(http.StatusOK)
-					rw.Write([]byte(`{"message": "Success to update todo"}`))
+					rw.Write([]byte(`{"message": "Successfully updated todo"}`))
 				}
 			}
 		}
