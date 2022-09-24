@@ -42,16 +42,6 @@ func main() {
 					rw.Write([]byte(`{"message": "Success to delete todo"}`))
 				}
 			}
-		case "PUT":
-			for index, todo := range todos {
-				if todo.ID == id {
-					json.NewDecoder(r.Body).Decode(&todo)
-					todos[index].ID = todo.ID
-					todos[index].Task = todo.Task
-					rw.WriteHeader(http.StatusOK)
-					rw.Write([]byte(`{"message": "Success to update todo"}`))
-				}
-			}
 		}
 	})
 
