@@ -39,7 +39,7 @@ func main() {
 				if todo.ID == id {
 					todos = append(todos[:index], todos[index+1:]...)
 					rw.WriteHeader(http.StatusOK)
-					rw.Write([]byte(`{"message": "Success to delete todo"}`))
+					rw.Write([]byte(`{"message": "Successfully deleted todo"}`))
 				}
 			}
 		}
